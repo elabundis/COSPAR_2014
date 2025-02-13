@@ -12,11 +12,15 @@
 \title{\fontsize{72}{86}\selectfont Tikz Poster Example}
 \author{Overleaf Team}
 \institute{Overleaf Institute}
-\titlegraphic{\includegraphics[width=0.07\textwidth]{Figures/UAS_logo.png}}
 
 \begin{document}
 
 \maketitle
+
+% Logos
+\node[anchor=west,xshift=7cm] at (TP@title.west) {\includegraphics[width=0.10\textwidth]{example-image}};
+\node[anchor=west,xshift=7cm,yshift=-8cm] at (TP@title.west) {\includegraphics[width=0.10\textwidth]{example-image}};
+\node[anchor=east,xshift=-7cm] at (TP@title.east) {\includegraphics[width=0.10\textwidth]{example-image}};
 
 \block{\fontsize{48}{58}\selectfont Block title}{\fontsize{36}{43}\selectfont
 Hello World!

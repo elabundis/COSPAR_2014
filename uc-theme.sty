@@ -132,7 +132,6 @@
 
 % -- TITLE FORMAT --
 
-% place logo to right of centered title
 \makeatletter
 \renewcommand\TP@maketitle{%
    \centering
@@ -145,8 +144,5 @@
         \vspace*{1em}
         {\LARGE \@institute}
     \end{minipage}%
-    \tikz[remember picture,overlay]\node[anchor=south east,xshift=0.5\linewidth,inner sep=0pt] {%
-       \@titlegraphic
-    };
 }
 \makeatother
