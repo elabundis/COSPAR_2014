@@ -1,0 +1,29 @@
+\documentclass[25pt, margin=1in, innermargin=-4.5in, blockverticalspace=-0.25in, portrait]{tikzposter}
+\usepackage{anyfontsize}
+\usepackage{uc-theme}
+
+\geometry{paperwidth=36in,paperheight=48in}
+
+% set theme parameters
+\tikzposterlatexaffectionproofoff  % turn off tikzposter watermark
+\usetheme{UCTheme}
+\usecolorstyle{UCStyle}
+
+\title{\fontsize{72}{86}\selectfont Tikz Poster Example}
+\author{Overleaf Team}
+\institute{Overleaf Institute \vspace*{4em}}
+
+\begin{document}
+
+\maketitle
+
+% Logos
+\node[anchor=north west,xshift=7cm] at (TP@title.north west) {\includegraphics[width=0.10\textwidth]{example-image}};
+\node[anchor=south west,xshift=7cm] at (TP@title.south west) {\includegraphics[width=0.10\textwidth]{example-image}};
+\node[anchor=north east,xshift=-7cm] at (TP@title.north east) {\includegraphics[width=0.10\textwidth]{example-image}};
+
+\block{\fontsize{48}{58}\selectfont Block title}{\fontsize{36}{43}\selectfont
+Hello World!
+}
+
+\end{document}

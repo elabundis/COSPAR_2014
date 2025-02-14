@@ -1,0 +1,148 @@
+% UC Unofficial LaTeX poster template 
+% Forked from Emory Poster Template by Blair J. Rossetti
+% https://www.overleaf.com/latex/templates/emory-poster-template/skpfmpxjnqdh
+% Author: Mohamed Elashri
+% Date: 08/01/2023
+% Last Modification: 09/03/2023
+
+% -- COLORS --
+% Based on UC color plattee guideline 
+% https://www.uc.edu/about/marketing-communications/brand-guide/visual-identity/color.html
+
+
+
+% UC primary palette
+\definecolor{UCRed}{HTML}{e00122} % UC primary color is Red
+\definecolor{UCBlack}{HTML}{000000} % Another is Black
+\definecolor{UCWhite}{HTML}{ffffff} % And white
+
+% UC secondary palette
+\definecolor{UCDarkRed}{HTML}{b8011c} % UC Dark Red 
+\definecolor{UCMaroon}{HTML}{890519} % UC Calhoun Maroon
+\definecolor{UCSilver}{HTML}{a7a5aa} % UC Steger Silver
+\definecolor{UCMist}{HTML}{e0dfe3} % UC Main Street Mist
+\definecolor{UCBearcatsBlack}{HTML}{333333} % UC Bearcats Black
+\definecolor{UCGold}{HTML}{d1b179} % UC Gettler Gold
+\definecolor{UCTan}{HTML}{eadbc1} % UC Tangeman Tan
+
+
+
+% UC web palette
+\definecolor{LightYellow}{HTML}{ffde75}
+
+% tikzposter color palette
+\definecolorpalette{UCPalette} {
+    \definecolor{colorOne}{named}{UCRed}
+    \definecolor{colorTwo}{named}{UCDarkRed}
+    \definecolor{colorThree}{named}{UCBlack}
+}
+
+% tikzposter style
+\definecolorstyle{UCStyle} {
+    \usecolorpalette{UCPalette}
+}{
+    % background
+    \colorlet{backgroundcolor}{UCWhite}
+    \colorlet{framecolor}{UCWhite}
+    % title colors
+    \colorlet{titlefgcolor}{UCBlack}
+    \colorlet{titlebgcolor}{UCWhite}
+    % block colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{UCWhite}
+    \colorlet{blockbodybgcolor}{UCWhite}
+    \colorlet{blockbodyfgcolor}{UCBlack}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{UCWhite}
+    \colorlet{innerblocktitlefgcolor}{UCBlack}
+    \colorlet{innerblockbodybgcolor}{colorTwo}
+    \colorlet{innerblockbodyfgcolor}{UCBlack}
+    % note colors
+    \colorlet{notefgcolor}{UCBlack}
+    \colorlet{notebgcolor}{colorTwo}
+    \colorlet{noteframecolor}{colorTwo}
+}
+
+% -- STYLE --
+
+% background
+\definebackgroundstyle{UCBackgroundStyle}{% tikzposter style
+\definecolorstyle{UCStyle} {
+    \usecolorpalette{UCPalette}
+}{
+    % background
+    \colorlet{backgroundcolor}{UCWhite}
+    \colorlet{framecolor}{UCWhite}
+    % title colors
+    \colorlet{titlefgcolor}{UCBlack}
+    \colorlet{titlebgcolor}{UCWhite}
+    % block colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{UCWhite}
+    \colorlet{blockbodybgcolor}{UCWhite}
+    \colorlet{blockbodyfgcolor}{UCBlack}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{UCWhite}
+    \colorlet{innerblocktitlefgcolor}{UCBlack}
+    \colorlet{innerblockbodybgcolor}{colorTwo}
+    \colorlet{innerblockbodyfgcolor}{UCBlack}
+    % note colors
+    \colorlet{notefgcolor}{UCBlack}
+    \colorlet{notebgcolor}{colorTwo}
+    \colorlet{noteframecolor}{colorTwo}
+}
+    \draw[line width=0pt, color=framecolor, fill=backgroundcolor]
+    (bottomleft) rectangle (topright);
+}
+
+% title
+\definetitlestyle{UCTitleStyle}{
+    width=\textwidth, linewidth=5pt, titletotopverticalspace=0in
+}{
+    \begin{scope}[line width=\titlelinewidth,]
+    \draw[color=colorThree!30!white,round cap-round cap]
+    (\titleposleft,\titleposbottom)--(\titleposright,\titleposbottom);
+    \end{scope}
+}
+
+% block
+\defineblockstyle{UCBlockStyle}{
+    titlewidthscale=0.9, bodywidthscale=1, roundedcorners=5
+}{
+    \draw[color=framecolor, fill=blockbodybgcolor,
+    rounded corners=\blockroundedcorners] (blockbody.south west)
+    rectangle (blockbody.north east);
+    \ifBlockHasTitle
+    \draw[color=framecolor, fill=blocktitlebgcolor,
+    rounded corners=\blockroundedcorners] (blocktitle.south west)
+    rectangle (blocktitle.north east);
+    \fi
+}
+
+% -- THEME -- 
+% UC themevs beamerposter
+\definelayouttheme{UCTheme}{
+    \usecolorstyle[colorPalette=UCPalette]{UCStyle}
+    \usebackgroundstyle{UCBackgroundStyle}
+    \usetitlestyle{UCTitleStyle}
+    \useblockstyle{UCBlockStyle}
+    \useinnerblockstyle{Default}
+    \usenotestyle{Default}
+}
+
+% -- TITLE FORMAT --
+
+\makeatletter
+\renewcommand\TP@maketitle{%
+   \centering
+   \begin{minipage}[b]{0.8\linewidth}
+        \centering
+        \color{titlefgcolor}
+        {\bfseries \Huge \sc \@title \par}
+        \vspace*{1em}
+        {\huge \@author \par}
+        \vspace*{1em}
+        {\LARGE \@institute}
+    \end{minipage}%
+}
+\makeatother
