@@ -34,11 +34,19 @@
 \maketitle
 
 % Logos
-\node[anchor=north west,xshift=7cm] at (TP@title.north west) {\includegraphics[width=0.10\textwidth]{Figures/cospar_moscow_2014.png}};
-\node[anchor=south west,xshift=7cm] at (TP@title.south west) {\includegraphics[width=0.10\textwidth]{Figures/UAS_logo.png}};
-\node[anchor=north east,xshift=-7cm] at (TP@title.north east) {\includegraphics[width=0.10\textwidth]{Figures/miigaik_logo.png}};
-\node[anchor=south east,xshift=-7cm] at (TP@title.south east) {\includegraphics[width=0.10\textwidth]{Figures/UNISON_logo.png}};
+\node[anchor=north west,xshift=0.08\textwidth,yshift=-17pt] at (TP@title.north west)
+	{\includegraphics[width=0.10\textwidth]{Figures/cospar_moscow_2014.png}};
 
+\node[anchor=west,xshift=0.08\textwidth,yshift=0.00\textwidth] at (TP@title.west)
+	{\includegraphics[width=0.10\textwidth]{Figures/UAS_logo.png}};
+
+\node[anchor=north east,xshift=-0.08\textwidth,yshift=-17pt] at (TP@title.north east)
+	{\includegraphics[width=0.10\textwidth]{Figures/miigaik_logo.png}};
+
+\node[anchor=east,xshift=-0.08\textwidth] at (TP@title.east)
+	{\includegraphics[width=0.10\textwidth]{Figures/UNISON_logo.png}};
+
+% Body text
 \block{\fontsize{48}{58}\selectfont Block title}{\fontsize{36}{43}\selectfont
 Hello World!
 }
