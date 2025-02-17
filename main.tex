@@ -9,19 +9,44 @@
 \usetheme{UCTheme}
 \usecolorstyle{UCStyle}
 
-\title{\fontsize{72}{86}\selectfont Tikz Poster Example}
-\author{Overleaf Team}
-\institute{Overleaf Institute \vspace*{4em}}
+\title{
+	\parbox{\linewidth}{\centering
+		ESTABLISHMENT OF VLBI BETWEEN THE GTM AND SEVERAL POSSIBLE  RADIOTELESCOPES: ZELENCHUK, GREEN BANK, PUSHINO, PARKES, AND ALMA \\
+		\vspace{1em}
+		COSPAR GENERAL ASSEMBLY \\
+		MOSCOW, RUSSIA, AUGUST 2014 \\
+		\vspace{1em}
+	}
+}
+\author{\fontsize{38}{46}\selectfont
+	Victor I. Krilov 
+	(Department of Astronomy and Cosmic Geodesy, Moscow State University of Geodesy and Cartography),\\
+	Tatiana N. Kokina and Daniel Mendoza-Araiza
+	(Center for Astronomy, Autonomous University of Sinaloa UAS),\\
+	Julio Saucedo-Morales 
+	(Department for Research in Physics, University of Sonora UNISON),\\
+	Daniel Flores-Gutierrez 
+	(Institute of Astronomy, UNAM).
+}
 
 \begin{document}
 
 \maketitle
 
 % Logos
-\node[anchor=north west,xshift=7cm] at (TP@title.north west) {\includegraphics[width=0.10\textwidth]{example-image}};
-\node[anchor=south west,xshift=7cm] at (TP@title.south west) {\includegraphics[width=0.10\textwidth]{example-image}};
-\node[anchor=north east,xshift=-7cm] at (TP@title.north east) {\includegraphics[width=0.10\textwidth]{example-image}};
+\node[anchor=north west,xshift=0.08\textwidth,yshift=-17pt] at (TP@title.north west)
+	{\includegraphics[width=0.10\textwidth]{Figures/cospar_moscow_2014.png}};
 
+\node[anchor=west,xshift=0.08\textwidth,yshift=0.00\textwidth] at (TP@title.west)
+	{\includegraphics[width=0.10\textwidth]{Figures/UAS_logo.png}};
+
+\node[anchor=north east,xshift=-0.08\textwidth,yshift=-17pt] at (TP@title.north east)
+	{\includegraphics[width=0.10\textwidth]{Figures/miigaik_logo.png}};
+
+\node[anchor=east,xshift=-0.08\textwidth] at (TP@title.east)
+	{\includegraphics[width=0.10\textwidth]{Figures/UNISON_logo.png}};
+
+% Body text
 \block{\fontsize{48}{58}\selectfont Block title}{\fontsize{36}{43}\selectfont
 Hello World!
 }
