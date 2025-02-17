@@ -1,5 +1,9 @@
 \documentclass[25pt, margin=1in, innermargin=-1.7in, blockverticalspace=-0.25in, portrait]{tikzposter}
 \usepackage{anyfontsize}
+\usepackage{amsmath} % Align eqs and matrix environments
+\usepackage{IEEEtrantools} % Better alignment with IEEEeqnarray
+\usepackage{gensymb} % Create degrees symbol
+\usepackage{siunitx}
 \usepackage{uc-theme}
 
 \geometry{paperwidth=36in,paperheight=48in}
@@ -82,6 +86,141 @@ observing the quasar 1633+382 through VLBI at 3mm,
 using the GTM Alfonso Serrano on the summit of Sierra Negra, Puebla 
 in combination with seven radiotelescopes located as shown ...
 The fringes detected are shown ...
+}
+
+ % Second column
+\column{0.5}% Width set relative to text width
+
+\block{}{\fontsize{36}{43}\selectfont
+As an example,
+let us consider the case for the Sierra Negra-Green Bank baseline.
+The visibility zones for these radiotelescopes can be calculated with the following equation:
+
+\begin{multline*}
+	h_{ki} = \arcsin( \sin\Phi \sin(-90\degree + k\degree) + 
+								\cos(-90\degree + k\degree) \cos\Phi \cos(i\degree - 
+									\Lambda)
+						), \\
+	k = 0, 1, ..., 180; i = 0, 1, ..., 360.
+\end{multline*}
+
+}
+
+
+\block{Theory of the VLBI method}{\fontsize{36}{43}\selectfont
+
+Linking equation of the VLBI method:
+\begin{equation*}
+	c \tau = \Delta X_{ij} L + \Delta Y_{ij} M + \Delta Z_{ij} N,
+\end{equation*}
+
+where $L = \cos\gamma \cos\delta$,
+$M = \sin\gamma \cos\delta$,
+and $N = \sin\delta$.
+Here, $\gamma$ and $\delta$ are the spherical coordinates of the quasars.
+
+Moreover
+\begin{equation}
+	A = 
+		\begin{pmatrix}
+			L_1 & M_1 & N_1 \\
+			\vdots & \vdots & \vdots \\
+			L_n & M_n & N_n \\
+		\end{pmatrix},
+\end{equation}
+
+\begin{equation*}
+	\vec X = 
+		\begin{pmatrix}
+		 	\delta \Delta X \\
+			\delta \Delta Y \\
+			\delta \Delta Z \\
+		\end{pmatrix},
+\end{equation*}
+
+\begin{equation*}
+	\vec L = 
+		\begin{pmatrix}
+			c \tau^{(c)}_1 - \tau^{(0)}_1 \\
+			\vdots \\
+			c \tau^{(c)}_n - \tau^{(0)}_n \\
+		\end{pmatrix},
+\end{equation*}
+
+\begin{equation*}
+	\vec \nu = 
+		\begin{pmatrix}
+			\nu_1 \\
+			\vdots \\
+			\nu_n \\
+		\end{pmatrix}.
+\end{equation*}
+
+Normal equations
+\begin{equation*}
+	Q = A^T A \vec X  + A^T \vec L.
+\end{equation*}
+
+Solutions
+\begin{equation*}
+	\vec X = -(A^T A)^{-1} A^T L.
+\end{equation*}
+
+The precision evaluation is:
+\begin{IEEEeqnarray*}{rCl}
+	\mu & = & \sqrt{\frac{{\vec \nu}^T \nu}{n - 3}}, \\
+	Q = (A^T A)^{-1} & = & 
+		\begin{pmatrix} 
+			q_{xx} & q_{xy} & q_{xz} \\
+			q_{yx} & q_{yy} & q_{yz} \\
+			q_{zx} & q_{zy} & q_{zz}
+		\end{pmatrix}, \\ 
+	m_{\Delta X} = \mu \sqrt{q_{xx}},
+	m_{\Delta Y} & = & \mu \sqrt{q_{yy}},
+	m_{\Delta Z} = \mu \sqrt{q_{zz}}.
+\end{IEEEeqnarray*}
+
+A priori evaluation of the increments $\Delta X$, $\Delta Y$, and $\Delta Z$ on the basis of the VLBI.
+Base Sierra Negra - Green Bank. 
+Distance: 2798706.05m.
+
+Measurement error \qquad $\sigma_\tau = 0.1$~nanosec. \\
+Solution
+\begin{IEEEeqnarray*}{C}
+	\delta \Delta X = \qty{99.976}{m}; \quad
+	\delta \Delta Y = \qty{-70.014}{m}; \quad
+	\delta \Delta Z = \qty{50.007}{m}. \\
+	m_{\Delta X} = \qty{.023}{m}; \quad
+	m_{\Delta Y} = \qty{.024}{m}; \quad
+	m_{\Delta Z} = \qty{.015}{m}.
+\end{IEEEeqnarray*} 
+
+Model values: $
+	\Delta X = \qty{1660938.908}{m}, \, 
+	\Delta Y = \qty{1149183.641}{m}, \, 
+	\Delta Z = \qty{1937373.075}{m}. \,
+	$
+
+Approximate values: $
+	\Delta Y = \qty{1149253.641}{m}, \, 
+	\Delta Z = \qty{1937323.075}{m}. \,
+	$
+
+
+}
+
+\block{}{\fontsize{36}{43}\selectfont
+Conclusion:
+VLBI is viable with the GTM as proposed here, and in fact it has already been demonstrated by INAOE and several US astronomical institutions which are planning to use it for relevant astronomical applications. 
+We would like to emphasize, however, the importance of using it for the ITRF as presented here.
+This project would additionally allow the participation of medium size universities in Mexico like UAS and UNISON,
+as well as to foster international collaborations,
+such as the ones considered here:
+Zelenchuk, Pushino (Russia), 
+Green Bank (USA),
+Parkes (Australia), 
+and
+Alma (Chile).
 }
 
 \end{columns}
