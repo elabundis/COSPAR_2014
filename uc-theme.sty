@@ -133,6 +133,7 @@
 % -- TITLE FORMAT --
 
 \makeatletter
+
 \renewcommand\TP@maketitle{%
    \centering
    \begin{minipage}[b]{0.8\linewidth}
@@ -145,4 +146,15 @@
         {\LARGE \@institute}
     \end{minipage}%
 }
+
+% Have \vdots uses chosen fontsize
+\renewcommand{\vdots}{%
+  \vbox{%
+    \baselineskip \fpeval{0.3*\f@baselineskip}\p@
+    \lineskiplimit\z@
+    \kern\fpeval{0.3*\f@baselineskip}\p@
+    \hbox{.}\hbox{.}\hbox{.}%
+  }%
+}
+
 \makeatother
