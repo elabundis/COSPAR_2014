@@ -78,7 +78,53 @@ For a preliminary evaluation of these baseline components we use the coordinates
 
 The principle behind the use of interferometric observations of far away radiosources (quasars) is based on the fact that the quasar's signal do not arrive at the same time to the antennas of the radiotelescopes $Q_1$ and $Q_2$ located at a great distance from each other (baseline).
 The time difference is due to the difference in distance from each radiotelescope to the radiosource.
+\vspace{1em}
+}
 
+% Table and Fig.
+\begin{subcolumns}
+    \subcolumn{0.25} 
+			\block{}{Fig. goes here} 
+    \subcolumn{0.75} 
+			\block{}{
+				\normalsize
+				\begin{flushright}
+					{\renewcommand{\arraystretch}{1.0}
+						\renewcommand{\tabcolsep}{0.4cm}
+						\begin{tabular}{| >{\centering\arraybackslash}p{4.5cm}|c|c|c|c|c|}
+							\hline
+							Station & 
+							$\Lambda,$ deg & $\Phi,$ deg & $X,$ m & $Y,$ m & $Z,$ m \\ \hline
+							Sierra Negra & 
+							96W & 19 & $-6303374.17$ & $-5997609.56$ & 2076517.97 \\ 
+							(0) & & & & & \\ \hline
+							Green Bank & 
+							78W & 39 & 1030564.74 & $-4848425.92$ & 4013891.04 \\ 
+							(1) & & & & & \\ \hline
+							Krim & 
+							43E & 43 & 3411526.14 & 3181299.59 & 4349878.29 \\ 
+							(2) & & & & & \\ \hline
+							Puschino & 
+							37E & 55 & 2921687.03 & 2201649.10 & 5224663.14 \\ 
+							(3) & & & & & \\ \hline
+							Parkes & 
+							149E & $-34$ & $-4532455.87$ & 2723374.24 & $-356608.39$ \\
+							(4) & & & & & \\ \hline
+							ALMA & 
+							\ang{70;24}W & \ang{24;24}S & 1948920.01 & $-5473203.27$ & $-2629980.09$ \\ 
+							(5) & & & & & \\ \hline
+							\multicolumn{6}{c}
+							{\rule{0pt}{4ex} 
+								Tab.~1\space\space 
+								Coordinates of the radiotelescopes considered in this project
+							} \\
+					\end{tabular}}
+				\end{flushright}
+				\vspace{1em}
+			}
+\end{subcolumns}
+
+\block{}{
 After submitting the abstract to COSPAR we found in: http://www.imfgtm.org,
 that the VLBI capability of the GTM had been demonstrated by astronomers from 
 INAOE, UMass, Haystack Observatory, MIT and NRAO, 
@@ -183,6 +229,37 @@ The precision evaluation is:
 A priori evaluation of the increments $\Delta X$, $\Delta Y$, and $\Delta Z$ on the basis of the VLBI.
 Base Sierra Negra - Green Bank. 
 Distance: 2798706.05m.
+
+% Table
+% Give the table more room
+\vspace{1em}
+\begin{center}
+	\normalsize
+	{\renewcommand{\arraystretch}{1.0}
+		\renewcommand{\tabcolsep}{0.4cm}
+		\begin{tabular}{|p{2cm}|l|l|l|l|l|l|l|l|l|l|}
+			\multicolumn{11}{c}
+			{Tab.~2\space\space Spherical coordinates of the quasars} \\
+			\hline
+			$\gamma$, deg & 
+			0 & 185 & 190 & 195 & 200 & 205 & 210 & 215 & 230 & 240 \\ \hline
+			$\delta$, deg & 
+			85 & 86 & 78 & 70 & 62 & 56 & 50 & 46 & 36 & 31 \\ \hline
+			$h0$, deg & 
+			18 & 20 & 22 & 25 & 29 & 33 & 37 & 42 & 56 & 65 \\ \hline
+			$h1$, deg & 
+			40 & 38 & 38 & 36 & 37 & 38 & 40 & 42 & 49 & 55 \\ \hline
+			$\gamma$, deg & 
+			255 & 260 & 280 & 295 & 305 & 320 & 335 & 345 & 355 & 350 \\ \hline
+			$\delta$, deg & 
+			26 & 23 & 42 & 35 & 37 & 42 & 51 & 62 & 76 & 55 \\ \hline
+			$h0$, deg & 
+			79 & 85 & 63 & 58 & 50 & 38 & 27 & 21 & 18 & 18 \\ \hline
+			$h1$, deg & 
+			64 & 65 & 87 & 79 & 72 & 61 & 52 & 46 & 42 & 43 \\ \hline
+	\end{tabular}}
+\end{center}
+\vspace{1em}
 
 Measurement error \qquad $\sigma_\tau = 0.1$~nanosec. \\
 Solution
