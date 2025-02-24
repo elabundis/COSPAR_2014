@@ -4,7 +4,7 @@
 \usepackage{IEEEtrantools} % Better alignment with IEEEeqnarray
 \usepackage{gensymb} % Create degrees symbol
 \usepackage{siunitx}
-\usetikzlibrary {arrows.meta}
+\usetikzlibrary {arrows.meta} % library of arrow symbols
 \usepackage{uc-theme}
 
 \usetikzlibrary{positioning}
@@ -140,7 +140,9 @@ The time difference is due to the difference in distance from each radiotelescop
 				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (-4,-4) 
 					node[anchor=north west]{x};
 				\draw[-{Stealth[length=4mm]}] (0,0) -- (5.2,4.0) 
-					node[anchor=north east,xshift=-1cm]{$a$};
+					node[circle, draw, inner sep=0pt, minimum width=5mm] (A) {}
+					node[anchor=north east,xshift=-1cm]{$a$}
+					-- (8.49, 5.20);
 				\draw (0,0) -- (5.2,-3.0) 
 					node[anchor=north west]{$Q^n_z$};
 			\end{tikzpicture}
