@@ -4,6 +4,7 @@
 \usepackage{IEEEtrantools} % Better alignment with IEEEeqnarray
 \usepackage{gensymb} % Create degrees symbol
 \usepackage{siunitx}
+\usetikzlibrary {arrows.meta}
 \usepackage{uc-theme}
 
 \usetikzlibrary{positioning}
@@ -129,14 +130,27 @@ The time difference is due to the difference in distance from each radiotelescop
 
 % Table and Fig.
 \begin{subcolumns}
-    \subcolumn{0.25} 
-			\block{}{Fig. goes here} 
-    \subcolumn{0.75} 
+    \subcolumn{0.30} 
+		\block{}{
+			\begin{tikzpicture}
+				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (0,8)
+					node[anchor=east]{z};
+				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (8,0) 
+					node[anchor=north east]{y};
+				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (-4,-4) 
+					node[anchor=north west]{x};
+				\draw[-{Stealth[length=4mm]}] (0,0) -- (5.2,4.0) 
+					node[anchor=north east,xshift=-1cm]{$a$};
+				\draw (0,0) -- (5.2,-3.0) 
+					node[anchor=north west]{$Q^n_z$};
+			\end{tikzpicture}
+		} 
+    \subcolumn{0.70} 
 			\block{}{
 				\normalsize
 				\begin{flushright}
 					{\renewcommand{\arraystretch}{1.0}
-						\renewcommand{\tabcolsep}{0.4cm}
+						\renewcommand{\tabcolsep}{0.2cm}
 						\begin{tabular}{| >{\centering\arraybackslash}p{4.5cm}|c|c|c|c|c|}
 							\hline
 							Station & 
