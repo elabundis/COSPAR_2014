@@ -6,6 +6,8 @@
 \usepackage{siunitx}
 \usepackage{uc-theme}
 
+\usetikzlibrary{positioning}
+
 \geometry{paperwidth=36in,paperheight=48in}
 
 % set theme parameters
@@ -76,15 +78,15 @@ Here we explore the possibility of achieving this with the LMT as a VLBI station
 	% Left column images
 	\subcolumn{0.5} 
 	\block{}{
-		\begin{flushleft}
-			\includegraphics[width=0.20\textwidth]{Figures/RGNA.png}
-		\end{flushleft}
+		\node[anchor=north west] (rgna)
+			{\includegraphics[width=0.20\textwidth]{Figures/RGNA.png}};
+		\node (cap1) [below=0cm of rgna,xshift=2.7em,yshift=1.5em] {caption1};
 		\vspace{1em}
-	} 
-	\block{}{
-		\begin{flushleft}
-			\includegraphics[width=0.20\textwidth]{Figures/ITRF_2020.png}
-		\end{flushleft}
+	  %
+		\node (itrf) [below=0cm of cap1,xshift=2.7em,yshift=0em]
+			{\includegraphics[width=0.20\textwidth]{Figures/ITRF_2020.png}};
+		\node (cap2) [below=0cm of itrf,xshift=2.7em,yshift=1.5em] {caption2};
+	  %		
 		\vspace{1em}
 	} 
 	% Right column images
