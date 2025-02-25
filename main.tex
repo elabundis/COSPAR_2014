@@ -132,19 +132,27 @@ The time difference is due to the difference in distance from each radiotelescop
 \begin{subcolumns}
     \subcolumn{0.30} 
 		\block{}{
-			\begin{tikzpicture}
-				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (0,8)
+			\begin{tikzpicture}[
+				roundnode/.style={circle, draw, very thick, inner sep=0pt, minimum width=5mm},
+				]
+				% Nodes
+				\node[roundnode] (v0) at (0,0) {};
+				\node[roundnode] (v1) at (5.2,-3.0) {};
+				\node[roundnode] (va) at (5.2,4.0) {};
+
+				% Axes
+				\draw[ultra thick, -{Stealth[length=5mm]}] (v0) -- (0,8)
 					node[anchor=east]{z};
-				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (8,0) 
+				\draw[ultra thick, -{Stealth[length=5mm]}] (v0) -- (8,0) 
 					node[anchor=north east]{y};
-				\draw[ultra thick, -{Stealth[length=5mm]}] (0,0) -- (-4,-4) 
+				\draw[ultra thick, -{Stealth[length=5mm]}] (v0) -- (-4,-4) 
 					node[anchor=north west]{x};
-				\draw[-{Stealth[length=4mm]}] (0,0) -- (5.2,4.0) 
-					node[circle, draw, inner sep=0pt, minimum width=5mm] (A) {}
-					node[anchor=north east,xshift=-1cm]{$a$}
-					-- (8.49, 5.20);
-				\draw (0,0) -- (5.2,-3.0) 
-					node[anchor=north west]{$Q^n_z$};
+
+				% Vectors
+				\draw[-{Stealth[length=4mm]}] (v0) -- (va)
+					node[anchor=north east,xshift=-1cm]{$a$};
+				\draw[-{Stealth[length=4mm]}] (va) -- (8.49, 5.20);
+				\draw (v0) -- (v1) node[anchor=north west]{$Q^n_z$};
 			\end{tikzpicture}
 		} 
     \subcolumn{0.70} 
