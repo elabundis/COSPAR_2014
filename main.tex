@@ -78,37 +78,39 @@ Here we explore the possibility of achieving this with the LMT as a VLBI station
 	% Left column images
 	\subcolumn{0.5} 
 	\block{}{
+		\normalsize
 		\node[anchor=north west] (rgna)
 			{
 				\includegraphics[width=0.20\textwidth]{Figures/RGNA.png}
 			};
-		\node (cap1) [below=0cm of rgna,xshift=2.7em,yshift=1.5em] {caption1};
+		\node (cap1) [below=0cm of rgna,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 1}};
 		\vspace{1em}
 	  %
-		\node (itrf) [below=1cm of cap1,xshift=2.7em,yshift=0em]
+		\node (itrf) [below=0.5cm of cap1,xshift=2.7em]
 			{
 				\includegraphics[width=0.20\textwidth]{Figures/ITRF_2020.png}
 			};
-		\node (cap2) [below=0cm of itrf,xshift=2.7em,yshift=1.5em] {caption2};
+		\node (cap3) [below=0cm of itrf,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 3}};
 	  %		
 		\vspace{1em}
 	} 
 	% Right column images
 	\subcolumn{0.5} 
 	\block{}{
+		\normalsize
 		\begin{center}
 			\node[anchor=north west] (gps) {
 				\includegraphics[width=0.15\textwidth]{Figures/gps_constellation_dark.jpg}
 			};
-			\node (cap3) [below=0cm of gps,xshift=2.7em,yshift=1.5em] {caption3};
+			\node (cap2) [below=0cm of gps,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 2}};
 		\end{center}
 		\vspace{1em}
 		%
-		\node (vlbi) [below=0cm of cap3,xshift=2.7em,yshift=2.0em] {
+		\node (vlbi) [below=0cm of cap2,xshift=2.7em,yshift=2.0em] {
 				\includegraphics[width=0.20\textwidth]{Figures/VLBI_stations_proposal.png}
 		};
-		\node (cap4) [below=0cm of vlbi,xshift=2.7em,yshift=1.5em] {caption4};
-		\vspace{26em}
+		\node (cap4) [below=0cm of vlbi,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 4}};
+		\vspace{31em}
 		%
 	}
 \end{subcolumns}
