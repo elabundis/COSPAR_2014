@@ -147,13 +147,13 @@ The time difference is due to the difference in distance from each radiotelescop
 				\draw[ultra thick, -{Stealth[length=5mm]}] (v0) -- (8,0) 
 					node[anchor=north east]{y};
 				\draw[ultra thick, -{Stealth[length=5mm]}] (v0) -- (-4,-4) 
-					node[anchor=north west]{x};
+					node[anchor=north west] (x-axis) {x};
 
 				% Vectors
 				\draw[-{Stealth[length=4mm]}] (v0) -- (va)
 					node[anchor=north east,xshift=-1cm]{$a$};
 				\draw[-{Stealth[length=4mm]}] (v0) -- (vb)
-					node[anchor=north east,xshift=-1cm]{$b$};
+					node[anchor=north east,xshift=-5mm]{$b$};
 				\draw[-{Stealth[length=4mm]}] (va) -- (8.49, 5.20);
 				\draw[-{Stealth[length=4mm]}] (vb) -- (6.63, 7.23);
 
@@ -161,6 +161,22 @@ The time difference is due to the difference in distance from each radiotelescop
 				\draw (va) -- (vb) ;
 				\draw (va) -- (v1) ;
 				\draw (v0) -- (v1) node[anchor=north west]{$Q^n_z$};
+
+				% Arcs
+				\draw[thick, ->] (-0.707,-0.707) arc (225:331.389:1);
+				\draw[thick, ->] (1.317,-0.718) arc (-28.610:29.958:1.5);
+				\draw[thick, ->] (1.906,1.099) arc (29.958:55.008:2.2);
+
+				% Labels
+				\node[yshift=3mm] at (-1.2,0) {$Q_1$};
+				\node[xshift=-4mm,yshift=10mm] at (3.64,5.20) {$Q_2$};
+				\node[yshift=0mm] at (0,-1.5) {$\vartheta$};
+				\node[yshift=5mm] at (2,0) {$\delta$};
+				\node[yshift=0mm] at (2.212,2.026) {$\varphi$};
+				\node[xshift=-8mm] at (8.49, 5.20) {$\sigma$};
+				\node[xshift=-8mm] at (6.63, 7.23) {$\sigma$};
+
+				% Fig label
 			\end{tikzpicture}
 		} 
     \subcolumn{0.68} 
