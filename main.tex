@@ -1,4 +1,4 @@
-\documentclass[25pt, margin=1in, innermargin=-1.7in, blockverticalspace=-0.25in, portrait]{tikzposter}
+\documentclass[a0paper, 20pt, margin=1in, innermargin=0.0in, blockverticalspace=-0.25in, portrait]{tikzposter}
 \usepackage{anyfontsize}
 \usepackage{amsmath} % Align eqs and matrix environments
 \usepackage{IEEEtrantools} % Better alignment with IEEEeqnarray
@@ -8,8 +8,6 @@
 \usepackage{uc-theme}
 
 \usetikzlibrary{positioning}
-
-\geometry{paperwidth=36in,paperheight=48in}
 
 % set theme parameters
 \tikzposterlatexaffectionproofoff  % turn off tikzposter watermark
@@ -25,7 +23,7 @@
 		\vspace{1em}
 	}
 }
-\author{\fontsize{38}{46}\selectfont
+\author{
 	Victor I. Krilov 
 	(Department of Astronomy and Cosmic Geodesy, Moscow State University of Geodesy and Cartography),\\
 	Tatiana N. Kokina and Daniel Mendoza-Araiza
@@ -45,7 +43,7 @@
 	{\includegraphics[width=0.10\textwidth]{Figures/cospar_moscow_2014.png}};
 
 \node[anchor=south west,yshift=1em] at (TP@title.south west)
-	{\includegraphics[width=0.10\textwidth]{Figures/UAS_logo.png}};
+	{\includegraphics[width=0.09\textwidth]{Figures/UAS_logo.png}};
 
 \node[anchor=north east,yshift=-17pt] at (TP@title.north east)
 	{\includegraphics[width=0.10\textwidth]{Figures/miigaik_logo.png}};
@@ -111,7 +109,7 @@ Here we explore the possibility of achieving this with the LMT as a VLBI station
 				\includegraphics[width=0.20\textwidth]{Figures/VLBI_stations_proposal.png}
 		};
 		\node (cap4) [below=0cm of vlbi,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 4}};
-		\vspace{31em}
+		\vspace{34em}
 		%
 	}
 \end{subcolumns}
@@ -125,14 +123,13 @@ For a preliminary evaluation of these baseline components we use the coordinates
 
 The principle behind the use of interferometric observations of far away radiosources (quasars) is based on the fact that the quasar's signals (see Fig.~5) do not arrive at the same time to the antennas of the radiotelescopes $Q_1$ and $Q_2$ located at a great distance from each other (baseline).
 The time difference is due to the difference in distance from each radiotelescope to the radiosource.
-\vspace{1em}
 }
 
 % Table and Fig.
 \begin{subcolumns}
     \subcolumn{0.32} 
 		\block{}{
-			\begin{tikzpicture}[
+			\begin{tikzpicture}[scale=0.9,
 				roundnode/.style={circle, draw, very thick, inner sep=0pt, minimum width=5mm},
 				]
 				% Nodes
@@ -178,7 +175,7 @@ The time difference is due to the difference in distance from each radiotelescop
 
 				% Fig label
 				\normalsize
-				\node (vlbi-scheme) [below=0cm of x-axis, xshift=5em, yshift=-1.3em] {\textbf{Fig. 5}}; 
+				\node (vlbi-scheme) [below=0cm of x-axis, xshift=5em, yshift=-0.5em] {\textbf{Fig. 5}}; 
 			\end{tikzpicture}
 		} 
     \subcolumn{0.68} 
@@ -211,12 +208,12 @@ The time difference is due to the difference in distance from each radiotelescop
 							(5) & & & & & \\ \hline
 						\end{tabular}
 					}
-					{\rule{0pt}{4ex} 
-					\textbf{Tab.~1\space\space 
-						Coordinates of the radiotelescopes considered in this project}
+					{
+						\rule{0pt}{3ex}
+						\textbf{Tab.~1\space\space 
+							Coordinates of the radiotelescopes considered in this project}
 					}
 				\end{flushright}
-				\vspace{1em}
 			}
 \end{subcolumns}
 
@@ -237,7 +234,6 @@ The fringes detected are shown ...
 As an example,
 let us consider the case for the Sierra Negra-Green Bank baseline.
 The visibility zones for these radiotelescopes can be calculated with the following equation:
-
 \begin{multline*}
 	h_{ki} = \arcsin( \sin\Phi \sin(-90\degree + k\degree) + 
 								\cos(-90\degree + k\degree) \cos\Phi \cos(i\degree - 
