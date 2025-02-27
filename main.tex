@@ -240,8 +240,14 @@ The fringes detected are shown Fig.~7.
 	\node (fringes) [right=of locations.north east, xshift=7.5em, yshift=-4em] {
 		\includegraphics[height=0.15\textwidth]{Figures/fringes_vlbi.png}
 	};
-	\node (cap7) [below=0cm of fringes,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 7}};
-	\vspace{14em}
+	\node (x-axis-7) [below=0cm of fringes,xshift=2.7em,yshift=1.5em] {
+		\textbf{Fringe Delay Rate (ns/s)}
+};
+	\node (y-axis-7) [left=0cm of fringes, xshift=4.5em, yshift=11.0em, rotate=90] {
+		\textbf{Correlation Amplitude (\mbox{\boldmath$\times 10^{-4}$})}
+};
+	\node (cap7) [below=0cm of x-axis-7, xshift=4.0em, yshift=2.5em] {\textbf{Fig. 7}};
+	\vspace{11em}
 	%
 }
 
