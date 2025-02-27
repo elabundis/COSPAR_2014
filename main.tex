@@ -227,6 +227,24 @@ in combination with seven radiotelescopes located as shown ...
 The fringes detected are shown ...
 }
 
+\block{}{
+	\normalsize
+	\begin{center}
+		\node[anchor=north west,xshift=-0.5em,yshift=1em] (locations) {
+			\includegraphics[height=0.15\textwidth]{Figures/locations_VLBI.png}
+		};
+		\node (cap6) [below=0cm of locations,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 6}};
+	\end{center}
+	\vspace{1em}
+	%
+	\node (fringes) [right=of locations.north east, xshift=7.5em, yshift=-4em] {
+		\includegraphics[height=0.15\textwidth]{Figures/fringes_vlbi.png}
+	};
+	\node (cap7) [below=0cm of fringes,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 7}};
+	\vspace{14em}
+	%
+}
+
  % Second column
 \column{0.5}% Width set relative to text width
 
@@ -241,9 +259,7 @@ The visibility zones for these radiotelescopes can be calculated with the follow
 						), \\
 	k = 0, 1, ..., 180; i = 0, 1, ..., 360.
 \end{multline*}
-
 }
-
 
 \block{}{
 \begin{center}
