@@ -284,19 +284,26 @@ The visibility zones for these radiotelescopes can be calculated with the follow
 	\subcolumn{0.5} 
 	\block{}{
 		\begin{tikzfigure}
-			\includegraphics[width=0.20\textwidth]{
-				Figures/visibility_zone_1.png
-			}
+			\node[anchor=north west, xshift=-0.5em, yshift=1.5em] (vis1) {
+				\includegraphics[height=0.14\textwidth]{
+					Figures/visibility_zone_1.png
+				}
+			};
+			\node (cap8) [below=0cm of vis1,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 8}};
 		\end{tikzfigure}
 	} 
 	% Right column image
 	\subcolumn{0.5} 
 	\block{}{
 		\begin{tikzfigure}
-			\includegraphics[width=0.20\textwidth]{
-				Figures/visibility_zone_2.png
-			}
+			\node[anchor=north west, xshift=-3em, yshift=1.5em] (vis2) {
+				\includegraphics[height=0.14\textwidth]{
+					Figures/visibility_zone_2.png
+				}
+			};
+			\node (cap9) [below=0cm of vis2,xshift=2.7em,yshift=1.5em] {\textbf{Fig. 9}};
 		\end{tikzfigure}
+		\vspace{11em}
 	}
 \end{subcolumns}
 
