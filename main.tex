@@ -4,6 +4,10 @@
 \usepackage{IEEEtrantools} % Better alignment with IEEEeqnarray
 \usepackage{gensymb} % Create degrees symbol
 \usepackage{siunitx}
+\sisetup{
+	propagate-math-font = true,
+	reset-math-version = false
+}
 \usetikzlibrary {arrows.meta} % library of arrow symbols
 \usepackage{uc-theme}
 
@@ -372,10 +376,10 @@ Moreover
 
 Normal equations
 \begin{equation*}
-	Q = A^T A \vec X  + A^T \vec L.
+	A^T A \vec X  + A^T \vec L = 0.
 \end{equation*}
 
-Solutions
+Solution
 \begin{equation*}
 	\vec X = -(A^T A)^{-1} A^T L.
 \end{equation*}
@@ -394,9 +398,11 @@ The precision evaluation is:
 	m_{\Delta Z} = \mu \sqrt{q_{zz}}.
 \end{IEEEeqnarray*}
 
-A priori evaluation of the increments $\Delta X$, $\Delta Y$, and $\Delta Z$ on the basis of the VLBI.
-Base Sierra Negra - Green Bank. 
-Distance: 2798706.05m.
+\textbf{\noindent
+	A priori evaluation of the increments {\boldmath$\Delta X$}, {\boldmath$\Delta Y$}, and {\boldmath$\Delta Z$} on the basis of the VLBI.
+	Base Sierra Negra - Green Bank. 
+	Distance: 2798706.05m.
+}
 
 % Table
 % Give the table more room
@@ -440,16 +446,18 @@ Solution
 	m_{\Delta Z} = \qty{.015}{m}.
 \end{IEEEeqnarray*} 
 
-Model values: $
+Model values: 
+{\boldmath$
 	\Delta X = \qty{1660938.908}{m}, \, 
 	\Delta Y = \qty{1149183.641}{m}, \, 
 	\Delta Z = \qty{1937373.075}{m}. \,
-	$
+$}
 
-Approximate values: $
+Approximate values:
+{\boldmath$
 	\Delta Y = \qty{1149253.641}{m}, \, 
 	\Delta Z = \qty{1937323.075}{m}. \,
-	$
+$}
 
 
 }
